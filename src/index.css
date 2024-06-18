@@ -5,6 +5,13 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-y: hidden;
+  overflow-x: hidden;
+
+}
+
+h1 {
+ color: white;
 }
 
 code {
@@ -12,14 +19,17 @@ code {
     monospace;
 }
 
+
 .container {
  background-color: black;
- padding: 20px;
  display: flex;
  flex-direction: column;
  justify-content: center;
  align-items: center;
- height: 100vh;
+ height: var(--doc-height);
+ width: var(--doc-width);
+ margin: 0;
+ padding: 0;
  gap: 20px;
 }
 
@@ -39,6 +49,71 @@ button:hover {
  background-color: beige;
  color: black;
 }
+
+header {
+ padding: 20px;
+ width: var(--doc-width);
+ display: flex;
+ justify-content: space-between;
+}
+
+.button-logout {
+ margin:0px 20px;
+ align-items: center;
+ justify-content: center;
+}
+
+.header-left {
+ display: flex;
+ gap: 30px;
+}
+
+.image {
+ border-radius: 200px;
+ height: 60px;
+ width: 60px;
+}
+
+.profile {
+ all:initial;
+ margin: 0px 30px;
+ align-items: center;
+ justify-content: center;
+}
+
+.profile:hover {
+ background-color: transparent;
+}
+
+.profile-box {
+ display: flex;
+ align-items: center;
+}
+
+a {
+ text-decoration: none;
+ /* color: white; */
+ border-radius:0px 0px 10px 10px;
+ align-items: center;
+ display: flex;
+ padding: 0px 30px;
+ color: white;
+ 
+
+}
+
+a:focus {
+ text-decoration: none;
+ background-color: white;
+ color: black;
+ border-radius:0px 0px 10px 10px;
+ align-items: center;
+ display: flex;
+ padding: 0px 30px;
+ transition: 1s;
+}
+
+
 
 @media (max-width:840px) {
  .container {

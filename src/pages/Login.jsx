@@ -1,6 +1,5 @@
 import React from 'react'
 import GoogleButton from 'react-google-button'
-import './Login.css'
 import { signInWithPopup } from 'firebase/auth'
 import { auth, database, googleAuthProvider } from '../firebase'
 import {  useNavigate } from 'react-router-dom'

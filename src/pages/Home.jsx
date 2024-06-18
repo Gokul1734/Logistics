@@ -1,28 +1,19 @@
-import React from 'react'
-import './Home.css'
-import { signOut } from 'firebase/auth';
-import { auth } from '../firebase';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import Header from '../components/Header';
 
 const Home = () => {
   const navigate = useNavigate();
   const user = JSON.parse(localStorage.getItem('user'));
-  const handleLogOut = async () => {
-   try {
-    await signOut(auth);
-    localStorage.removeItem('token');
-    localStorage.removeItem('user');
-    navigate('/login')
-   } catch (error) {
-    console.log(error);
-   }
-  }
+  // const display = 'Home';
   return (
-    <div className='container'>
+   <div className='container'>
+    <Header/>
+     <div className='container'>
      <h1>Welcome to my React App {user.displayName} !</h1>
-     <img src={user.photoURL} alt=''/>
-     <button onClick={handleLogOut}>Logout</button>
-      
+     <img className='image' src={user.photoURL} alt=''/>
+     <button onClick={() => {navigate('../customers')}} >Go to Customers Page</button>
+    </div>
     </div>
   )
 }
