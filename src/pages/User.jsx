@@ -2,9 +2,10 @@ import React from 'react'
 
 const User = () => {
   return (
-    <div>
-      
-    </div>
+   <div className='container'>
+    <Header status='false'/>
+    <div className='container'></div>
+   </div>
   )
 }
 

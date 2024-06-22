@@ -2,10 +2,10 @@ import React from 'react'
 import Header from '../components/Header';
 
 const Customers = () => {
-  const name = "Dharani";
+  const display = JSON.parse(localStorage.getItem('Page'));
   return (
     <div className='container'>
-      <Header/>
+      <Header status='false'/>
       <div className='container'></div>
     </div>
   )
