@@ -14,7 +14,7 @@ const Home = () => {
     case 'Home':
      return (
       <div className='container'>
-       <h1>Welcome to my React App {user.displayName}!</h1>
+       <h1>Welcome to my Logistics Management Server {user.displayName}!</h1>
        <div className='header-group'>
        <button onClick={() => {navigate('../customers')}} >Customers</button>
        <button onClick={() => {navigate('../truck')}} >Trucks</button>

@@ -21,6 +21,502 @@ const Truck = () => {
  const [Tracker,setTracker] = useState('');
  const [Preview,setPreview] = useState(false);
 
+ let Trucks = [
+  {
+   RTO : 'RTO123',
+   Insurance : 'INS123',
+   Vehicle : 'V12059',
+   Warehouse:'Chennai',
+   status : 'Transit',
+  },
+   {
+   RTO : 'RTO123',
+   Insurance : 'INS123',
+   Vehicle : 'V12059',
+   Warehouse:'Chennai',
+   status : 'Transit',
+  },
+  {
+   RTO : 'RTO123',
+   Insurance : 'INS123',
+   Vehicle : 'V12059',
+   Warehouse:'Chennai',
+   status : 'Available',
+
+  },
+ {
+   RTO : 'RTO123',
+   Insurance : 'INS123',
+   Vehicle : 'V12059',
+   Warehouse:'Chennai',
+   status : 'Service',
+
+  },
+  {
+   RTO : 'RTO123',
+   Insurance : 'INS123',
+   Vehicle : 'V12059',
+   Warehouse:'Chennai',
+   status : 'Available',
+
+  },
+  {
+   RTO : 'RTO123',
+   Insurance : 'INS123',
+   Vehicle : 'V12059',
+   Warehouse:'Chennai',
+   status : 'Available',
+
+  },
+  {
+   RTO : 'RTO123',
+   Insurance : 'INS123',
+   Vehicle : 'V12059',
+   Warehouse:'Chennai',
+   status : 'Available',
+
+  },
+  {
+   RTO : 'RTO123',
+   Insurance : 'INS123',
+   Vehicle : 'V12059',
+   Warehouse:'Chennai',
+   status : 'Transit',
+
+  },
+  {
+   RTO : 'RTO123',
+   Insurance : 'INS123',
+   Vehicle : 'V12059',
+   Warehouse:'Chennai',
+   status : 'Transit',
+
+  },
+   {
+   RTO : 'RTO123',
+   Insurance : 'INS123',
+   Vehicle : 'V12059',
+   Warehouse:'Chennai',
+   status : 'Transit',
+
+  },
+  {
+   RTO : 'RTO123',
+   Insurance : 'INS123',
+   Vehicle : 'V12059',
+   Warehouse:'Chennai',
+   status : 'Available',
+
+  },
+ {
+   RTO : 'RTO123',
+   Insurance : 'INS123',
+   Vehicle : 'V12059',
+   Warehouse:'Chennai',
+   status : 'Service',
+
+  },
+  {
+   RTO : 'RTO123',
+   Insurance : 'INS123',
+   Vehicle : 'V12059',
+   Warehouse:'Chennai',
+   status : 'Transit',
+
+  },
+  {
+   RTO : 'RTO123',
+   Insurance : 'INS123',
+   Vehicle : 'V12059',
+   Warehouse:'Chennai',
+   status : 'Transit',
+
+  },
+ {
+   RTO : 'RTO123',
+   Insurance : 'INS123',
+   Vehicle : 'V12059',
+   Warehouse:'Chennai',
+   status : 'Transit',
+
+  },
+  {
+   RTO : 'RTO123',
+   Insurance : 'INS123',
+   Vehicle : 'V12059',
+   Warehouse:'Chennai',
+   status : 'Transit',
+
+  },
+  {
+   RTO : 'RTO123',
+   Insurance : 'INS123',
+   Vehicle : 'V12059',
+   Warehouse:'Chennai',
+   status : 'Transit',
+
+  },
+  {
+   RTO : 'RTO123',
+   Insurance : 'INS123',
+   Vehicle : 'V12059',
+   Warehouse:'Chennai',
+   status : 'Transit',
+
+  },
+ {
+   RTO : 'RTO123',
+   Insurance : 'INS123',
+   Vehicle : 'V12059',
+   Warehouse:'Chennai',
+   status : 'Transit',
+
+  },
+  {
+   RTO : 'RTO123',
+   Insurance : 'INS123',
+   Vehicle : 'V12059',
+   Warehouse:'Chennai',
+   status : 'Available',
+
+  },
+  {
+   RTO : 'RTO123',
+   Insurance : 'INS123',
+   Vehicle : 'V12059',
+   Warehouse:'Chennai',
+   status : 'Service',
+
+  },
+  {
+   RTO : 'RTO123',
+   Insurance : 'INS123',
+   Vehicle : 'V12059',
+   Warehouse:'Chennai',
+   status : 'Transit',
+
+  },
+ {
+   RTO : 'RTO123',
+   Insurance : 'INS123',
+   Vehicle : 'V12059',
+   Warehouse:'Chennai',
+   status : 'Transit',
+
+  },
+  {
+   RTO : 'RTO123',
+   Insurance : 'INS123',
+   Vehicle : 'V12059',
+   Warehouse:'Chennai',
+   status : 'Transit',
+
+  },
+  {
+   RTO : 'RTO123',
+   Insurance : 'INS123',
+   Vehicle : 'V12059',
+   Warehouse:'Chennai',
+   status : 'Transit',
+
+  },
+  {
+   RTO : 'RTO123',
+   Insurance : 'INS123',
+   Vehicle : 'V12059',
+   Warehouse:'Chennai',
+   status : 'Transit',
+
+  },
+ {
+   RTO : 'RTO123',
+   Insurance : 'INS123',
+   Vehicle : 'V12059',
+   Warehouse:'Chennai',
+   status : 'Transit',
+
+  },
+  {
+   RTO : 'RTO123',
+   Insurance : 'INS123',
+   Vehicle : 'V12059',
+   Warehouse:'Chennai',
+   status : 'Transit',
+
+  },
+  {
+   RTO : 'RTO123',
+   Insurance : 'INS123',
+   Vehicle : 'V12059',
+   Warehouse:'Chennai',
+   status : 'Transit',
+
+  },
+  {
+   RTO : 'RTO123',
+   Insurance : 'INS123',
+   Vehicle : 'V12059',
+   Warehouse:'Chennai',
+   status : 'Available',
+
+  },
+ {
+   RTO : 'RTO123',
+   Insurance : 'INS123',
+   Vehicle : 'V12059',
+   Warehouse:'Chennai',
+   status : 'Transit',
+
+  },
+  {
+   RTO : 'RTO123',
+   Insurance : 'INS123',
+   Vehicle : 'V12059',
+   Warehouse:'Chennai',
+   status : 'Available',
+
+  },
+  {
+   RTO : 'RTO123',
+   Insurance : 'INS123',
+   Vehicle : 'V12059',
+   Warehouse:'Chennai',
+   status : 'Transit',
+
+  },
+  {
+   RTO : 'RTO123',
+   Insurance : 'INS123',
+   Vehicle : 'V12059',
+   Warehouse:'Chennai',
+   status : 'Available',
+
+  },
+ {
+   RTO : 'RTO123',
+   Insurance : 'INS123',
+   Vehicle : 'V12059',
+   Warehouse:'Chennai',
+   status : 'Service',
+
+  },
+  {
+   RTO : 'RTO123',
+   Insurance : 'INS123',
+   Vehicle : 'V12059',
+   Warehouse:'Chennai',
+   status : 'Transit',
+
+  },
+  {
+   RTO : 'RTO123',
+   Insurance : 'INS123',
+   Vehicle : 'V12059',
+   Warehouse:'Chennai',
+   status : 'Service',
+
+  },
+  {
+   RTO : 'RTO123',
+   Insurance : 'INS123',
+   Vehicle : 'V12059',
+   Warehouse:'Chennai',
+   status : 'Transit',
+
+  },
+ {
+   RTO : 'RTO123',
+   Insurance : 'INS123',
+   Vehicle : 'V12059',
+   Warehouse:'Chennai',
+   status : 'Transit',
+
+  },
+  {
+   RTO : 'RTO123',
+   Insurance : 'INS123',
+   Vehicle : 'V12059',
+   Warehouse:'Chennai',
+   status : 'Transit',
+
+  },
+  {
+   RTO : 'RTO123',
+   Insurance : 'INS123',
+   Vehicle : 'V12059',
+   Warehouse:'Chennai',
+   status : 'Transit',
+
+  },
+  {
+   RTO : 'RTO123',
+   Insurance : 'INS123',
+   Vehicle : 'V12059',
+   Warehouse:'Chennai',
+   status : 'Transit',
+
+  },
+ {
+   RTO : 'RTO123',
+   Insurance : 'INS123',
+   Vehicle : 'V12059',
+   Warehouse:'Chennai',
+   status : 'Service',
+
+  },
+  {
+   RTO : 'RTO123',
+   Insurance : 'INS123',
+   Vehicle : 'V12059',
+   Warehouse:'Chennai',
+   status : 'Transit',
+
+  },
+  {
+   RTO : 'RTO123',
+   Insurance : 'INS123',
+   Vehicle : 'V12059',
+   Warehouse:'Chennai',
+   status : 'Transit',
+
+  },
+  {
+   RTO : 'RTO123',
+   Insurance : 'INS123',
+   Vehicle : 'V12059',
+   Warehouse:'Chennai',
+   status : 'Transit',
+
+  },
+ {
+   RTO : 'RTO123',
+   Insurance : 'INS123',
+   Vehicle : 'V12059',
+   Warehouse:'Chennai',
+   status : 'Transit',
+
+  },
+  {
+   RTO : 'RTO123',
+   Insurance : 'INS123',
+   Vehicle : 'V12059',
+   Warehouse:'Chennai',
+   status : 'Transit',
+
+  },
+  {
+   RTO : 'RTO123',
+   Insurance : 'INS123',
+   Vehicle : 'V12059',
+   Warehouse:'Chennai',
+   status : 'Transit',
+
+  },
+  {
+   RTO : 'RTO123',
+   Insurance : 'INS123',
+   Vehicle : 'V12059',
+   Warehouse:'Chennai',
+   status : 'Transit',
+
+  },
+ {
+   RTO : 'RTO123',
+   Insurance : 'INS123',
+   Vehicle : 'V12059',
+   Warehouse:'Chennai',
+   status : 'Transit',
+
+  },
+  {
+   RTO : 'RTO123',
+   Insurance : 'INS123',
+   Vehicle : 'V12059',
+   Warehouse:'Chennai',
+   status : 'Transit',
+
+  },
+  {
+   RTO : 'RTO123',
+   Insurance : 'INS123',
+   Vehicle : 'V12059',
+   Warehouse:'Chennai',
+   status : 'Transit',
+
+  },
+  {
+   RTO : 'RTO123',
+   Insurance : 'INS123',
+   Vehicle : 'V12059',
+   Warehouse:'Chennai',
+   status : 'Transit',
+
+  },
+ {
+   RTO : 'RTO123',
+   Insurance : 'INS123',
+   Vehicle : 'V12059',
+   Warehouse:'Chennai',
+   status : 'Transit',
+
+  },
+  {
+   RTO : 'RTO123',
+   Insurance : 'INS123',
+   Vehicle : 'V12059',
+   Warehouse:'Chennai',
+   status : 'Transit',
+
+  },
+  {
+   RTO : 'RTO123',
+   Insurance : 'INS123',
+   Vehicle : 'V12059',
+   Warehouse:'Chennai',
+   status : 'Transit',
+
+  },
+  {
+   RTO : 'RTO123',
+   Insurance : 'INS123',
+   Vehicle : 'V12059',
+   Warehouse:'Chennai',
+   status : 'Transit',
+
+  },
+ {
+   RTO : 'RTO123',
+   Insurance : 'INS123',
+   Vehicle : 'V12059',
+   Warehouse:'Chennai',
+   status : 'Transit',
+
+  },
+  {
+   RTO : 'RTO123',
+   Insurance : 'INS123',
+   Vehicle : 'V12059',
+   Warehouse:'Chennai',
+   status : 'Transit',
+
+  },
+  {
+   RTO : 'RTO123',
+   Insurance : 'INS123',
+   Vehicle : 'V12059',
+   Warehouse:'Chennai',
+   status : 'Transit',
+
+  },
+  {
+   RTO : 'RTO123',
+   Insurance : 'INS123',
+   Vehicle : 'V12059',
+   Warehouse:'Chennai',
+   status : 'Transit',
+
+  },
+ ]
 
 
 const [text,setText] = useState('');
@@ -182,8 +678,32 @@ function handlePermit(e) {
        {Clipboard && <CB text={text}/> }
       </div> : 
       <div className='container'>
-       <h1>Trucks Display</h1>
+       {/* <h1>Trucks Display</h1> */}
+       <div className='container-grid'>
+        {Trucks.map((truck) => {
+         return (
+          <div>
+           <div className='truckImage'><img/></div>
+           <section>
+           <section>
+           <h1>{truck.Vehicle}</h1>
+           <p>{truck.Warehouse}</p>
+           </section>
+           <section>
+           <button className={`button-${truck.status}`} >{truck.status}</button>
+           </section>
+           
+           </section>
+          </div>
+         )
+        })}
+         <div className='Footer'></div>
+         <div className='Footer'></div>
+         <div className='Footer'></div>
+         <div className='Footer'></div>
+       </div>
       </div>
+      
      }
      {Preview && 
        <div className='preview'>
@@ -198,7 +718,6 @@ function handlePermit(e) {
          <h4>Primary WareHouse : {Warehouse}</h4>
          <h4>GPS Tracker Number : {Tracker}</h4>
         </div>
-
         <button onClick={() => {setPreview(false)}}>Close</button>
        </div>}
     </div>

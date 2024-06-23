@@ -138,6 +138,7 @@ a:focus {
  transform: scale(1.01);
  align-items: end;
  padding: 6px;
+ z-index:2;
 
 }
 
@@ -398,6 +399,90 @@ a:focus {
  align-items: start;
 }
 
+.container-grid {
+ position: absolute;
+ top: 250px;
+ display: grid;
+ grid-template-columns: repeat(4, 1fr);
+ gap: 30px;
+ width: 95%;
+ height: 100%;
+ /* margin: 60px; */
+ overflow: scroll;
+ scrollbar-width: none;
+ transition: 2s;
+}
+
+.container-grid div {
+ height: 60%;
+ background-color: #141414; 
+ padding: 20px;
+ border-radius: 10px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ height: 300px;
+}
+
+.container-grid div {
+ display: flex;
+ flex-direction: column;
+ margin: 0;
+}
+
+.container-grid .truckImage {
+ width: 90%;
+ background-color:cadetblue;
+ padding: 10px; 
+}
+.container-grid div section {
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ width: 90%;
+ height: 60px;
+ padding: 20px;
+ 
+}
+
+.container-grid div section section {
+ display: flex;
+ flex-direction: column;
+ align-items: start;
+ width: 70%;
+ height: 100px;
+ /* justify-content: space-between; */
+}
+
+.container-grid .button-Available {
+ width: 130%;
+ margin-top: 20px;
+ background-color:#4CAF50;
+}
+.container-grid .button-Service {
+ width: 130%;
+ margin-top: 20px;
+ background-color: rgb(170, 12, 12);
+}
+.container-grid .button-Transit {
+ width: 130%;
+ margin-top: 20px;
+ background-color: rgb(225, 186, 32);
+}
+
+.container-grid div h1 {
+ margin-bottom: 0;
+ font: 200;
+ font-family:monospace;
+}
+
+.container-grid div p {
+ color: #fff;
+}
+
+.container-grid .Footer {
+ background-color: black;
+}
 
 @media (max-width:840px) {
  body {
