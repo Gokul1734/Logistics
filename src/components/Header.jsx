@@ -36,7 +36,6 @@ const Header = (props) => {
     </div>   : <FaArrowCircleLeft onClick={() => {navigate('../Home')}} size='3em' color='white' className='button-back' />}
 
    <div className='profile-box'>
-   <button className='button-logout' onClick={handleLogOut}>Logout</button>
    {/* <button className='profile'></button> */}
    <img 
     // onClick={() => {setHovering(!hovering)}}
@@ -48,12 +47,19 @@ const Header = (props) => {
     {hovering ?
     <div onMouseOver={()=>{setHovering(true)}}
     onMouseOut={() => {setHovering(false)}} className='floater'>
-     <h2>Gokulpriyan Karthikeyan</h2>
-     <h2>profile Display</h2>
-     <h2>profile Display</h2>
-     <h2>profile Display</h2>
-     <h2>profile Display</h2>
-     <h2>profile Display</h2>
+     <button onClick={() => {navigate('../user')}}>Gokulpriyan Karthikeyan</button>
+     <hr/>
+     <button>Warehouses</button>
+     <hr/>
+     <button>Help Desk</button>
+     <hr/>
+     <button>User Settings</button>
+     <hr/>
+     <button>Shipment Planner</button>
+     <hr/>
+     <button>Order History</button>
+     <hr/> 
+     <button className='button-logout' onClick={handleLogOut}>Logout</button>
 
      </div> : <div></div>}
    </div>

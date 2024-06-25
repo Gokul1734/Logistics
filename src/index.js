@@ -26,6 +26,7 @@ document.documentElement.style.setProperty('--doc-width', `${width}px`)
 
 const router = createBrowserRouter(
  createRoutesFromElements(
+  
   <Route path='/' element={<App/>}>
    <Route path='login' element={<Login/>}/>
    <Route path='/' element={<Protect/>}>
