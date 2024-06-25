@@ -519,6 +519,10 @@ a:focus {
  margin-top: 0;
 }
 
+.update {
+ margin: 20px;
+}
+
 .container-user {
  background-color: black;
  display: flex;
@@ -541,7 +545,19 @@ a:focus {
  flex-direction: column;
  justify-content: center;
  align-items: center;
- 
+
+}
+
+.container-user .generate {
+ display: flex;
+ padding: 10px;
+}
+
+ .edit {
+ background-color:cadetblue;
+ border-radius: 20px;
+ padding: 3px;
+ width: 15%;
 }
 
 .user-records div  {

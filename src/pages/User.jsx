@@ -1,9 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Header from '../components/Header'
 import { json } from 'react-router-dom'
+import { MdEdit } from 'react-icons/md';
+import { ref, set } from 'firebase/database';
+import { database } from '../firebase';
 
 const User = () => {
   const user = JSON.parse(localStorage.getItem('user'));
+  const [readOnly,setReadOnly] = useState('readOnly');
+  const [Name,setName] = useState('');
+  const [warehouse,setWarehouse] = useState('');
+  const [doj,setdoj] = useState('');
+  const [employeeID,setemployeeID] = useState('');
+  const [education,seteducation] = useState('');
+  const [phone,setphone] = useState('');
+  const [aadhar,setaadhar] = useState('');
+  const [bank,setbank] = useState('');
+  const eid = `E${user.uid.toUpperCase().slice(20)}`; 
+
   return (
    <div className='container'>
     <Header status='false'/>
@@ -29,31 +43,61 @@ const User = () => {
        <section className='input-div'>
         <div className='inputs'>
         <div className='input-side'>
-        <input  placeholder='Enter Truck Registration Number' ></input>
+        <section className='generate'>
+        <input value={Name} onChange={(e) => {setName(e.target.value)}} readOnly={readOnly}  placeholder='Name' ></input>
+        <MdEdit onClick={() => {setReadOnly('')}} className='edit' color='white' size={30} />
+        </section>
         <section>
-        <select className='Brand' color='white'>
-         <option value='Volvo'>Volvo</option>
-         <option value='Scanda'>Scanda</option>
-         <option value='Benz'>Benz</option>
-         <option value='MAN'>MAN</option>
+        <select value={warehouse} onChange={(e) => {setWarehouse(e.target.value)}}  className='Warehouse' color='white'>
+         <option value='Chennai'>Chennai</option>
+         <option value='Coimabatore'>Coimbatore</option>
+         <option value='Mumbai'>Mumbai</option>
+         <option value='Noida'>Noida</option>
+         <option value='Hyderabad'>Hyderabad</option>
+         <option value='Pune'>Pune</option>
+         <option value='Chandigarh'>Chandigarh</option>
+         <option value='Agra'>Agra</option>
+         <option value='Trichy'>Trichy</option>
+         <option value='Kochin'>Kochin</option>
+         <option value='Kolkata'>Kolkata</option>
+         <option value='Bangalore'>Bangalore</option>
+         <option value='Sydney'>Sydney</option>
+         <option value='Kuwait'>Kuwait</option>
+         <option value='Germany'>Germany</option>
+         <option value='Norway'>Norway</option>
+         <option value='Busan'>Busan</option>
+         <option value='Dubai'>Dubai</option>
+         <option value='Singapore'>Singapore</option>
+         <option value='Madagascar'>Madagascar</option>
+
         </select>
         </section>
         </div>
         <div className='input-side'>
-        <input  type='date' placeholder='Enter Truck Registration Date'></input>
-        <input type='number' placeholder='Enter Truck Capacity (Kgs)'></input>
+        <input value={doj} onChange={(e) => {setdoj(e.target.value)}}   type='date' placeholder='Joining Date'></input>
+        <input value={employeeID} onChange={(e) => {setemployeeID(e.target.value)}}  readOnly='readOnly' placeholder={eid}></input>
         </div>
         <div className='input-side'>
-        <input placeholder='Enter Truck Dimensions (cm X cm X cm)'></input>
-        <input placeholder='Enter Truck Load Type'></input>
+        <input value={education} onChange={(e) => {seteducation(e.target.value)}}  placeholder='Education'></input>
+        <input value={phone} onChange={(e) => {setphone(e.target.value)}}   placeholder='Phone Number'></input>
         </div>
         <div className='input-side'>
-        <input  placeholder='Enter Engine Chassis Number'></input>
-        <input placeholder='Enter Primary Warehouse'></input>
+        <input value={aadhar} onChange={(e) => {setaadhar(e.target.value)}}   placeholder='Adhaar Number'></input>
+        <input value={bank} onChange={(e) => {setbank(e.target.value)}}  placeholder='Bank Account Number'></input>
         </div>
-        <div className='input-side'>
-        <input  placeholder='Enter Tracker Number'></input>
-        </div>
+        <button onClick={(e) => {
+         e.preventDefault();
+         set(ref(database,'users/'+user.uid+'/Personal'),{
+           warehouse: warehouse,
+           doj: doj,
+           employeeID: employeeID,
+           education: education,
+           phone: phone,
+           aadhar: aadhar,
+           bank: bank
+
+         })
+        }} className='update'>Update Profile</button>
         
         </div>
        </section>

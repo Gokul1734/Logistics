@@ -4,6 +4,8 @@ import { IoIosAddCircle } from 'react-icons/io'
 import { FaCopy } from 'react-icons/fa';
 import CB from '../components/CB';
 import nextId, { setPrefix } from 'react-id-generator';
+import { ref, set } from 'firebase/database';
+import { database } from '../firebase';
 
 const Truck = () => {
  const [Clipboard,setClipboard] = useState(false);
@@ -718,7 +720,22 @@ function handlePermit(e) {
          <h4>Primary WareHouse : {Warehouse}</h4>
          <h4>GPS Tracker Number : {Tracker}</h4>
         </div>
-        <button onClick={() => {setPreview(false)}}>Close</button>
+        <button onClick={() => {
+         setPreview(false);
+         set(ref(database,'Trucks/'+vid),{
+          Regno:Regno,
+          Regdate:Regdate,
+          Capacity:Capacity,
+          Dimension:Dimension,
+          Chassis:Chassis,
+          Warehouse:Warehouse,
+          Tracker:Tracker,
+          RTO:RTO,
+          Permit:Permit,
+          Insurance:Insurance,
+          Vehicle:Vehicle,
+         })
+         }}>Save Truck</button>
        </div>}
     </div>
   )
